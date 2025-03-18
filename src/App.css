@@ -1,69 +1,399 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+:root {
+    --primery-color: #009DD4;
+    --text-color: #646464;
+    --background: #ebe9e9;
+}
 
-:root { --background: #ebe9e9; }
-* { margin: 0;padding: 0; }
+* {
+    margin: 0;
+    padding: 0;
+}
 
-::-webkit-scrollbar{width: 5px !important; height: 5px !important;}
-::-webkit-scrollbar-thumb{background: #009DD4 !important;}
-::-webkit-scrollbar-track{background: transparent !important;}
+::-webkit-scrollbar {
+    width: 5px !important;
+    height: 5px !important;
+}
 
-body { font-family: "Open Sans", sans-serif !important;  background-color: var(--background) !important; }
+::-webkit-scrollbar-thumb {
+    background: var(--primery-color) !important;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent !important;
+}
+
+body {
+    font-family: "Open Sans", sans-serif !important;
+    background-color: var(--background) !important;
+    overflow: hidden;
+}
 
 
 
 /* Header Styling */
 
-header{ width: 100%; height: 70px; background-color: #fff; position: fixed; top: 0; left: 0; z-index: 1000;}
-header .logo { text-decoration: none; }
-header .logo img{ width: 45px; }
-header .logo span{ color: #646464; font-size: 1.5rem; font-weight: 800; text-transform: uppercase;}
+header {
+    width: 100%;
+    height: 70px;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
 
-header button.rounded-circle{min-width: 40px !important; width: 40px !important; height: 40px !important; background-color: #f0f5ff !important; color: #009DD4;}
-header button.rounded-circle svg{color: #646464; font-size: 1.2rem !important; transition: all 0.2s ease-in-out;}
-header button.rounded-circle svg:hover{color: #009DD4;}
-.searchbox{width: 400px; height: 40px; background-color: #f0f5ff; border-radius: 0.5rem; padding: 0.2rem 0.9rem;}
-.searchbox input{background-color: transparent; border: 0px; outline: none; color: #646464;  font-size: 0.8rem;}
-.searchbox input::-webkit-input-placeholder {color:rgba(0, 0,0,0.6);}
-.searchbox svg{color: #646464; font-size: 1.2rem;}
+header .logo {
+    text-decoration: none;
+}
 
-.myAccount { text-align: left !important; color: #009DD4 !important; text-transform: capitalize !important;}
-.userImg { display: flex; align-items: center; justify-content: center; overflow: hidden; width: 40px; height: 40px; border: 0.1rem solid #009DD4; cursor: pointer; border-radius: 100%;}
-.userImg .rounded-circle{ display: flex; align-items: center; justify-content: center; overflow: hidden; width: 100%; height: 100%;}
-.userImg .rounded-circle img{ width: 100%; object-fit:cover;}
+header .logo img {
+    width: 45px;
+}
 
-.myAccount .userInfo { padding-left: 0.7rem; color: #000;}
-.myAccount .userInfo h4{ font-size: 1rem; font-weight: 600; margin-bottom: 0;}
-.myAccount .userInfo p{ margin-top: 0; font-size: 0.75rem;  color: #000; opacity: 0.8;}
+header .logo span {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
 
-#account-menu li{font-size: 0.85rem !important; padding: 0.75rem 0.9rem !important;}
-#account-menu li svg{font-size: 1.3rem !important;}
+header button.rounded-circle {
+    min-width: 40px !important;
+    width: 40px !important;
+    height: 40px !important;
+    background-color: #f0f5ff !important;
+    color: var(--primery-color);
+}
 
-#notification-menu .MuiPaper-elevation{right: 16% !important; width: 250px !important; left: auto !important;}
-.dropdown-list .scroll{ max-height: 200px; overflow-y: scroll; overflow-x: hidden;}
-.dropdown-list li.MuiButtonBase-root{ background: #ebf6ff !important; color: #000 !important; padding: 0.65rem 0.8rem !important;}
-.dropdown-list li.MuiButtonBase-root:hover{ background: #dce6ef !important;}
-.dropdown-list h4, #account-menu h4{ font-size: 1.3rem; font-weight: 600;}
+header button.rounded-circle svg {
+    color: var(--text-color);
+    font-size: 1.2rem !important;
+    transition: all 0.2s ease-in-out;
+}
 
-.dropdownInfo h4{font-size: 0.60rem;  white-space: normal;}
-.dropdownInfo h4 b{font-family: 600; margin-right: 0.4rem;}
-.dropdownInfo p{font-size: 0.55rem; margin-top: 0;}
-.text-sky{color: #009DD4;}
+header button.rounded-circle svg:hover {
+    color: var(--primery-color);
+}
 
-.btn-blue{ background-color: #009DD4 !important; font-size: 0.9rem !important; text-transform: capitalize !important; font-weight: 600 !important; color: #fff !important;}
+.searchbox {
+    display: flex;
+    align-items: center;
+    width: 400px;
+    height: 40px;
+    background-color: #ccd1dc;
+    border-radius: 0.5rem;
+    padding: 0.2rem 0.9rem;
+}
+
+.searchbox input {
+    background-color: transparent;
+    border: 0px;
+    outline: none;
+    color: var(--text-color);
+    font-size: 0.8rem;
+}
+
+.searchbox input::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.searchbox svg {
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
+.myAccount {
+    text-align: left !important;
+    color: var(--primery-color) !important;
+    text-transform: capitalize !important;
+}
+
+.userImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+    border: 0.1rem solid var(--primery-color);
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+.userImg .rounded-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.userImg .rounded-circle img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.myAccount .userInfo {
+    padding-left: 0.7rem;
+    color: #000;
+}
+
+.myAccount .userInfo h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.myAccount .userInfo p {
+    margin-top: 0;
+    font-size: 0.75rem;
+    color: #000;
+    opacity: 0.8;
+}
+
+#account-menu li {
+    font-size: 0.85rem !important;
+    padding: 0.75rem 0.9rem !important;
+}
+
+#account-menu li svg {
+    font-size: 1.3rem !important;
+}
+
+#notification-menu .MuiPaper-elevation {
+    right: 16% !important;
+    top: 61px !important;
+    width: 250px !important;
+    left: auto !important;
+}
+
+.dropdown-list .scroll {
+    max-height: 200px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.dropdown-list li.MuiButtonBase-root {
+    background: #ebf6ff !important;
+    color: #000 !important;
+    padding: 0.65rem 0.8rem !important;
+}
+
+.dropdown-list li.MuiButtonBase-root:hover {
+    background: #dce6ef !important;
+}
+
+.dropdown-list h4,
+#account-menu h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.dropdownInfo h4 {
+    font-size: 0.60rem;
+    white-space: normal;
+}
+
+.dropdownInfo h4 b {
+    font-family: 600;
+    margin-right: 0.4rem;
+}
+
+.dropdownInfo p {
+    font-size: 0.55rem;
+    margin-top: 0;
+}
+
+.text-sky {
+    color: var(--primery-color);
+}
+
+.btn-blue {
+    background-color: var(--primery-color) !important;
+    font-size: 0.9rem !important;
+    text-transform: capitalize !important;
+    font-weight: 600 !important;
+    color: #fff !important;
+}
 
 
 /* Sidebar Styling */
 
-.main aside{width: 20%; flex: 0 0 20%; transition: all 0.3s ease-in-out;}
-.main aside .sidebar{width: 20%; height: 100vh; max-height: 100vh; position: fixed; top: 70px; left: 0; background-color: #fff; overflow-y: auto; overflow-x: hidden; padding-bottom: 2rem;}
-.main aside .sidebar::-webkit-scrollbar{width: 3px !important;}
-.main aside .sidebar::-webkit-scrollbar-thumb{background: transparent !important;}
-.main aside:hover .sidebar::-webkit-scrollbar{background: #009DD4 !important;}
-.main aside .sidebar ul li{list-style: none;}
-.main aside .sidebar ul li Button{text-align: left; justify-content: left; border-radius: 0 !important; padding: 0.5rem 1rem !important; align-items: center; text-transform: capitalize !important; font-weight: 600 !important; font-family: "Open Sans", sans-serif !important;}
-.main aside .sidebar ul li Button:hover{background-color: #dce6ef !important;}
-.main aside .sidebar ul li Button .icon{display: flex; align-items: center; justify-content: center; width: 25px; height: 25px;}
-.main aside .sidebar ul li Button .icon svg{color: #000; opacity: 0.8; font-size: 1.3rem;}
-.main aside .sidebar ul li Button *{color: rgba(0, 0,0,0.7) !important;}
-.main aside .sidebar ul li Button {color: rgba(0, 0,0,0.7) !important;}
+.main aside {
+    width: 20%;
+    flex: 0 0 20%;
+    transition: all 0.3s ease-in-out;
+}
+
+.main aside .sidebar {
+    width: 20%;
+    height: 100vh;
+    max-height: 100vh;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    background-color: #fff;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: 2rem;
+}
+
+.main aside .sidebar::-webkit-scrollbar {
+    width: 3px !important;
+}
+
+.main aside .sidebar::-webkit-scrollbar-thumb {
+    background: transparent !important;
+}
+
+.main aside:hover .sidebar::-webkit-scrollbar {
+    background: var(--primery-color) !important;
+}
+
+.main aside .sidebar ul li {
+    list-style: none;
+}
+
+.main aside .sidebar ul li Button {
+    text-align: left;
+    justify-content: left;
+    border-radius: 0 !important;
+    padding: 0.5rem 1rem !important;
+    align-items: center;
+    text-transform: capitalize !important;
+    font-weight: 600 !important;
+    font-family: "Open Sans", sans-serif !important;
+}
+
+.main aside .sidebar ul li Button:hover {
+    background-color: #dce6ef !important;
+}
+
+.main aside .sidebar ul li Button .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+}
+
+.main aside .sidebar ul li Button .icon svg {
+    color: #000;
+    opacity: 0.8;
+    font-size: 1.3rem;
+}
+
+.main aside .sidebar ul li Button * {
+    color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.main aside .sidebar ul li Button {
+    color: rgba(0, 0, 0, 0.7) !important;
+}
+
+
+main {
+    width: 80%;
+    flex: 0 0 80%;
+}
+
+.right-content {
+    height: 100vh;
+    overflow: scroll;
+    padding: 90px 30px;
+}
+
+.dashboardBoxWrapper {
+    gap: 15px;
+    width: 100%;
+}
+
+.dashboardBoxWrapper .dashboardBox {
+    width: 45%;
+    height: 250px;
+    background: red;
+}
+
+.rounded-circle {
+    min-width: 40px !important;
+    width: 40px !important;
+    height: 40px !important;
+    background-color: #ccd1dc !important;
+    color: var(--primery-color);
+    cursor: default !important;
+}
+
+.rounded-circle svg {
+    color: var(--text-color);
+    font-size: 1.2rem !important;
+    transition: all 0.2s ease-in-out;
+}
+
+.rounded-circle svg:hover {
+    color: var(--primery-color);
+}
+
+
+.hd {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #403e57;
+}
+
+.cardFilters .col-md-3 h4 {
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #403e57;
+}
+
+
+
+table {
+    vertical-align: middle !important;
+}
+
+.table .thead-dark th {
+    background-color: var(--primery-color);
+    border-color: rgba(255, 255, 255, 0.1);
+    font-size: 0.8rem;
+    color: #ebf6ff;
+    text-transform: uppercase;
+}
+
+.table tbody td {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.table tbody .actions Button {
+    min-width: 35px !important;
+    width: 35px;
+    height: 35px;
+    margin: 0px 3px;
+}
+
+/* .tableFooter{
+
+} */
+
+.contact-list {
+    background-color: '#f7f7f7' !important;
+    border-right: 2px solid #ddd;
+}
+
+.contact-list .contact-wrapper {
+    overflow-y: auto;
+    height: 100vh;
+}
+
+.chat-screen {
+    height: 100vh;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: #ffffff !important;
+}

@@ -30,6 +30,7 @@ const Header = () => {
     const [isOpenNotification, setIsOpenNotification] = React.useState(false);
     const notificationOpen = Boolean(isOpenNotification);
 
+    
     const openMyAccountDropDown = (event) => {
         setAnchorEl(event.currentTarget);
     };
@@ -61,7 +62,6 @@ const Header = () => {
                         <Button className="rounded-circle me-3">
                             <MdMenuOpen />
                         </Button>
-                        <SearchBox />
                     </div>
 
                     {/* Menu Button */}
