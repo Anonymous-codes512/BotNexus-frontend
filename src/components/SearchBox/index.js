@@ -5,7 +5,7 @@ const SearchBox = ({ style }) => {
   return (
     <div className="searchbox position-relative" style={style}>
       <IoSearch className="me-2" />
-      <input type="text" placeholder="Search here..." autoFocus />
+      <input type="text" className="w-100" placeholder="Search here..." autoFocus />
     </div>
   );
 }

@@ -1,8 +1,7 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 
-import { useState } from "react";
 import { Button, Divider } from '@mui/material';
 import { IoMdCheckmark } from "react-icons/io";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
@@ -46,7 +45,7 @@ const Dashboard = () => {
     return (
         <div className="container-fluid right-content">
 
-            <div className="row mb-3 d-flex">
+            {/* <div className="row mb-3 d-flex">
                 <div className="col-12">
                     <div className="card shadow-lg">
                         <div className="card-body d-flex align-items-center">
@@ -55,7 +54,7 @@ const Dashboard = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             <div className="row mb-3 d-flex align-items-stretch">
                 {/* First Column */}
@@ -297,7 +296,7 @@ const Dashboard = () => {
                                 <th>SENT MESSAGE</th>
                                 <th>DElIVERED MESSAGE</th>
                                 <th>READ MESSAGE</th>
-                                <th className="text-center">ACTIONS</th>
+                                {/* <th className="text-center">ACTIONS</th> */}
                             </tr>
                         </thead>
 
@@ -313,11 +312,11 @@ const Dashboard = () => {
                                 <td>230</td>
                                 <td>220</td>
                                 <td>200</td>
-                                <td className="actions d-flex align-items-center justify-content-center">
+                                {/* <td className="actions d-flex align-items-center justify-content-center">
                                     <Button color="secondary" style={{ backgroundColor: "rgba(203, 60, 231, 0.2)" }}><FaEye /></Button>
                                     <Button color="success" style={{ backgroundColor: "rgba(26, 159, 83, 0.2)" }}><FaPencilAlt /></Button>
                                     <Button color="error" style={{ backgroundColor: "rgba(241, 17, 51, 0.2)" }}><MdDelete /></Button>
-                                </td>
+                                </td> */}
                             </tr>
                             <tr>
                                 <td>2</td>
@@ -330,11 +329,11 @@ const Dashboard = () => {
                                 <td>230</td>
                                 <td>220</td>
                                 <td>200</td>
-                                <td className="actions d-flex align-items-center justify-content-center">
+                                {/* <td className="actions d-flex align-items-center justify-content-center">
                                     <Button color="secondary" style={{ backgroundColor: "rgba(203, 60, 231, 0.2)" }}><FaEye /></Button>
                                     <Button color="success" style={{ backgroundColor: "rgba(26, 159, 83, 0.2)" }}><FaPencilAlt /></Button>
                                     <Button color="error" style={{ backgroundColor: "rgba(241, 17, 51, 0.2)" }}><MdDelete /></Button>
-                                </td>
+                                </td> */}
                             </tr>
                             <tr>
                                 <td>3</td>
@@ -347,11 +346,11 @@ const Dashboard = () => {
                                 <td>230</td>
                                 <td>220</td>
                                 <td>200</td>
-                                <td className="actions d-flex align-items-center justify-content-center">
+                                {/* <td className="actions d-flex align-items-center justify-content-center">
                                     <Button color="secondary" style={{ backgroundColor: "rgba(203, 60, 231, 0.2)" }}><FaEye /></Button>
                                     <Button color="success" style={{ backgroundColor: "rgba(26, 159, 83, 0.2)" }}><FaPencilAlt /></Button>
                                     <Button color="error" style={{ backgroundColor: "rgba(241, 17, 51, 0.2)" }}><MdDelete /></Button>
-                                </td>
+                                </td> */}
                             </tr>
                             <tr>
                                 <td>4</td>
@@ -364,11 +363,11 @@ const Dashboard = () => {
                                 <td>230</td>
                                 <td>220</td>
                                 <td>200</td>
-                                <td className="actions d-flex align-items-center justify-content-center">
+                                {/* <td className="actions d-flex align-items-center justify-content-center">
                                     <Button color="secondary" style={{ backgroundColor: "rgba(203, 60, 231, 0.2)" }}><FaEye /></Button>
                                     <Button color="success" style={{ backgroundColor: "rgba(26, 159, 83, 0.2)" }}><FaPencilAlt /></Button>
                                     <Button color="error" style={{ backgroundColor: "rgba(241, 17, 51, 0.2)" }}><MdDelete /></Button>
-                                </td>
+                                </td> */}
                             </tr>
                             <tr>
                                 <td>5</td>
@@ -381,11 +380,11 @@ const Dashboard = () => {
                                 <td>230</td>
                                 <td>220</td>
                                 <td>200</td>
-                                <td className="actions d-flex align-items-center justify-content-center">
+                                {/* <td className="actions d-flex align-items-center justify-content-center">
                                     <Button color="secondary" style={{ backgroundColor: "rgba(203, 60, 231, 0.2)" }}><FaEye /></Button>
                                     <Button color="success" style={{ backgroundColor: "rgba(26, 159, 83, 0.2)" }}><FaPencilAlt /></Button>
                                     <Button color="error" style={{ backgroundColor: "rgba(241, 17, 51, 0.2)" }}><MdDelete /></Button>
-                                </td>
+                                </td> */}
                             </tr>
                         </tbody>
 

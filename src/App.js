@@ -8,6 +8,7 @@ import Header from './components/Header/index';
 import Sidebar from './components/Sidebar';
 import ComposeMessage from './pages/Compose Message';
 import Chat from './pages/Chat';
+import Contact from './pages/Contact';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
             <Route path="/" element={<Dashboard />} />
             <Route path="/compose-message" element={<ComposeMessage/>} />
             <Route path="/chat" element={<Chat/>} />
+            <Route path="/contact" element={<Contact/>} />
           </Routes>
         </main>
       </div>

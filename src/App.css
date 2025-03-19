@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 :root {
-    --primery-color: #009DD4;
+    --primery-color: #1565c0;
     --text-color: #646464;
     --background: #ebe9e9;
 }
@@ -391,9 +391,80 @@ table {
     height: 100vh;
 }
 
+.chat_contact_list{
+    cursor: pointer !important;
+}
+
+.chat_contact_list-active{
+    background-color: #d9e5fc;
+}
+
+.chat_contact_list:hover {
+    background-color: #d9e5fc;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
 .chat-screen {
-    height: 100vh;
-    overflow-y: auto;
+    height: calc(100vh - 75px); /* Full height minus header and footer */
+    overflow: hidden;
     padding: 20px;
     background-color: #ffffff !important;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header {
+    position: sticky;
+    top: 0;
+    z-index: 10; /* Ensures the header stays on top */
+    background-color: #ebe9e9;
+}
+
+.chat-footer {
+    position: sticky;
+    bottom: 0;
+    z-index: 5; /* Ensures the footer stays at the bottom */
+    background-color: #ebe9e9;
+}
+
+.chat-messages {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: calc(100vh - 150px); /* Adjust height for the middle section (header + footer height) */
+    flex-grow: 1;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.message-you {
+    align-items: flex-end;
+}
+
+.message-contact {
+    align-items: flex-start;
+}
+
+.message-content {
+    background-color: #dcf8c6; /* Light green for user messages */
+    padding: 10px;
+    border-radius: 15px;
+    max-width: 70%;
+}
+
+.message-contact .message-content {
+    background-color: #e5e5e5; /* Light gray for contact messages */
+}
+
+.message-you .message-content {
+    background-color: #0084ff; /* Blue for user messages */
+    color: white;
+}
+
+.message-content small {
+    font-size: 0.7rem;
+    color: #888;
 }
