@@ -61,9 +61,9 @@ const Sidebar = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to={'/contact'} onClick={() => handleClick('/contact')}>
-                        <Button className="w-100" style={active === '/contact' ? activeStyle : {}}>
-                            <span className="icon me-2" style={active === '/contact' ? activeIconStyle : {}}>
+                    <Link to={'/contact-list'} onClick={() => handleClick('/contact-list')}>
+                        <Button className="w-100" style={active === '/contact-list' ? activeStyle : {}}>
+                            <span className="icon me-2" style={active === '/contact-list' ? activeIconStyle : {}}>
                                 <MdContactPage />
                             </span>
                             Contact
@@ -81,9 +81,9 @@ const Sidebar = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to={'/payment'} onClick={() => handleClick('/payment')}>
-                        <Button className="w-100" style={active === '/payment' ? activeStyle : {}}>
-                            <span className="icon me-2" style={active === '/payment' ? activeIconStyle : {}}>
+                    <Link to={'/payment-screen'} onClick={() => handleClick('/payment-screen')}>
+                        <Button className="w-100" style={active === '/payment-screen' ? activeStyle : {}}>
+                            <span className="icon me-2" style={active === '/payment-screen' ? activeIconStyle : {}}>
                                 <FaCreditCard />
                             </span>
                             Payment
